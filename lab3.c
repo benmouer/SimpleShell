@@ -5,10 +5,6 @@
 #include <string.h>
 
 /*Benjamin Mouer
- * CSC 241
- * Lab 3
- * 10/25/18
- * Dr.Cañas
  * */
 
 
@@ -61,7 +57,6 @@ int main(int argc, char **argv) {
  *
  *
  *
- * I used https://stackoverflow.com/questions/12252103/how-to-read-a-line-from-stdin-blocking-until-the-newline-is-found for information on how to do this function.
  * */
 
 char *nextLine(){
@@ -76,11 +71,6 @@ char *nextLine(){
  *
  * I make sure to read null as my last word so I know when to stop reading a line this function returns a pointer to a list of words
  *
- *
- * I used the websites https://stackoverflow.com/questions/2993075/allocating-and-de-allocating-memory-for-char64-in-c and http://c-faq.com/aryptr/dynmuldimary.html to figure out how to allocate my memory for my char **words.
- *
- *
- * I used https://www.tutorialspoint.com/c_standard_library/c_function_strtok.htm and https://en.cppreference.com/w/c/string/byte/strtok to get information about strtok() and " \t\n"
  * */
 
 char **wordArray(char *line){
@@ -104,10 +94,6 @@ char **wordArray(char *line){
  * 2.) if the command is not running in background, I need to wait till the child function terminates (by exit(0))
  * and then, only after that, will I read the next command.
  *
- *
- * I used the lab manual for information on execvp()
- * I used https://www.tutorialspoint.com/c_standard_library/c_function_perror.htm for information on perror.
- * I used the lab manual for lab2 for info on how to wait for a child process to finish
  * */
 
 int exc(char **words, int amp) {
@@ -143,9 +129,6 @@ void exitCheck(char **words){
 /*This checks if the command (which is the first word) ends with "&".
  * example -> "ls& -la
  * if it does then I return a 1 to amp to identify that this command will run in the background.
- *
- *
- * I used https://www.programiz.com/c-programming/c-pointer-functions for information on pointers and how to successfully pass and manipulate the data within the pointers inside of functions.
  * */
 
 int checkAmp(char *** words){
