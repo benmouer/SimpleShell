@@ -1,9 +1,8 @@
 NAME: Benjamin Mouer
-CSC-241 - Lab 3
 
-The purpose of this lab is to understand how to create a simple shell and run commands from inside that shell. This lab requires the use of execvp(), waitpid(), malloc(), and fork(). Without understanding of these functions, the lab would not be possible. 
+The purpose of this lab/program is to understand how to create a simple shell and run commands from inside that shell. This lab requires the use of execvp(), waitpid(), malloc(), and fork(). Without understanding of these functions, the lab would not be possible. 
 
-My lab is thoroughly described through comments in the code. Here is a simple brief summary of how it runs:
+My program is thoroughly described through comments in the code. Here is a simple brief summary of how it runs:
 1.) Get the line from the command line and create a string of words.
 2.) Take that string and though use of strtok(), split the line into words inside an array.
 3.) Use this array of words, a forked child process, and execvp() to run the command specified by "command [file or directory]"
